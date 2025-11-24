@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tridev Travel Agency | Your Journey to Incredible Destinations</title>
+    <meta name="description" content="Book unforgettable travel packages and reliable taxi services for Uttarakhand, Uttar Pradesh, Delhi, and Jammu & Kashmir with Tridev Travel Agency.">
+    <link rel="canonical" href="https://www.tridevtravel.com/">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-primary: #00A896;
+            --color-secondary-bg: #F0F4F8;
+            --color-accent-cta: #FFD166;
+            --color-text: #33415C;
+            --font-ui: 'Poppins', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --card-radius: 16px;
+            --card-shadow: 0 4px 16px rgba(0,0,0,.12);
+            --transition-speed: 0.3s;
+        }
+        
+        /* Basic Reset and Typography for immediate view */
+        body {
+            font-family: var(--font-body);
+            color: var(--color-text);
+            margin: 0;
+            padding-top: 50px; /* Space for fixed header */
+            background-color: white;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, .btn { font-family: var(--font-ui); }
+        
+        /* Header Strip */
+        .header-strip {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--color-primary);
+            color: white;
+            padding: 8px 16px;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.8rem;
+        }
+        .header-strip a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 500;
+            transition: opacity var(--transition-speed);
+        }
+        .header-strip a:hover { opacity: 0.8; }
+        
+        /* Hero Section - Critical styles */
+        .hero {
+            background-color: var(--color-secondary-bg);
+            padding: 40px 16px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .hero p {
+            font-size: 1rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+    </style>
+    
+    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Tridev Travel Agency",
+      "url": "https://www.tridevtravel.com/",
+      "logo": "https://www.tridevtravel.com/images/logo.png",
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "telephone": "+91-96343-47223",
+        "contactType": "customer service"
+      }]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Tridev Travel Agency",
+      "image": "https://www.tridevtravel.com/images/hero.webp",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Sample Street, Near Bus Stand",
+        "addressLocality": "Dehradun",
+        "addressRegion": "Uttarakhand",
+        "postalCode": "248001",
+        "addressCountry": "IN"
+      },
+      "telephone": "+91-96343-47223",
+      "priceRange": "$$",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <header class="header-strip">
+        <span>📞 <a href="tel:+919634347223">Travel: +91 96343 47223</a></span>
+        <span>|</span>
+        <span>🚕 <a href="tel:+918800778189">Taxi: +91 88007 78189</a></span>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <h1 class="animate-in">Tridev Travel Agency</h1>
+            <p class="animate-in">Unlock the magic of North India. Your trusted partner for packages and taxi services across Uttarakhand, UP, Delhi & Kashmir.</p>
+            
+            <div class="hero-widgets">
+                <a href="#packages" class="widget-card package-widget">
+                    <span class="widget-icon">✈️</span>
+                    <h3>Travel Packages</h3>
+                    <p>Curated tours for a hassle-free vacation. Explore the best destinations.</p>
+                    <button class="btn btn-primary">View Packages</button>
+                </a>
+                
+                <a href="#taxi" class="widget-card taxi-widget">
+                    <span class="widget-icon">🚕</span>
+                    <h3>Taxi Booking</h3>
+                    <p>Reliable and comfortable cabs for inter-city and local travel. Book now.</p>
+                    <button class="btn btn-accent">Book a Ride</button>
+                </a>
+            </div>
+        </section>
+
+        <section class="destination-section bg-secondary" id="trending">
+            <h2 class="section-title">✨ Trending 24/7 Destinations</h2>
+            <p class="section-subtitle">Our most popular spots for a quick getaway or a grand adventure.</p>
+            <div class="card-grid">
+                <article class="destination-card" data-service="Travel Package" data-destination="Agra">
+                    <img src="images/placeholder-agra.webp" alt="The Taj Mahal in Agra, a symbol of eternal love" loading="lazy" width="400" height="300">
+                    <h3>Agra</h3>
+                    <p>Home to the iconic Taj Mahal, Agra offers a deep dive into Mughal history and architectural brilliance.</p>
+                    <button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                </article>
+                <article class="destination-card" data-service="Travel Package" data-destination="Delhi">
+                    <img src="images/placeholder-delhi.webp" alt="Historical monuments in Delhi" loading="lazy" width="400" height="300">
+                    <h3>Delhi</h3>
+                    <p>A vibrant blend of Old and New India, featuring historical forts, bustling markets, and modern city life.</p>
+                    <button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                </article>
+                <article class="destination-card" data-service="Travel Package" data-destination="Jaipur">
+                    <img src="images/placeholder-jaipur.webp" alt="Hawa Mahal in Jaipur, the Pink City" loading="lazy" width="400" height="300">
+                    <h3>Jaipur</h3>
+                    <p>The 'Pink City' of Rajasthan, famous for its magnificent palaces, forts, and rich royal heritage.</p>
+                    <button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                </article>
+                <article class="destination-card" data-service="Travel Package" data-destination="Varanasi">
+                    <img src="images/placeholder-varanasi.webp" alt="Ghats of Varanasi at sunrise" loading="lazy" width="400" height="300">
+                    <h3>Varanasi</h3>
+                    <p>The spiritual capital of India, known for its sacred ghats, ancient temples, and mesmerizing Ganga Aarti.</p>
+                    <button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                </article>
+                <article class="destination-card" data-service="Travel Package" data-destination="Goa">
+                    <img src="images/placeholder-goa.webp" alt="Beaches of Goa with palm trees" loading="lazy" width="400" height="300">
+                    <h3>Goa</h3>
+                    <p>India's ultimate beach destination, offering vibrant nightlife, Portuguese architecture, and serene coasts.</p>
+                    <button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                </article>
+                <article class="destination-card" data-service="Travel Package" data-destination="Kashmir">
+                    <img src="images/placeholder-kashmir.webp" alt="Shikara boats on Dal Lake in Kashmir" loading="lazy" width="400" height="300">
+                    <h3>Kashmir</h3>
+                    <p>Often called 'Paradise on Earth', famed for its breathtaking valleys, pristine lakes, and snow-capped mountains.</p>
+                    <button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                </article>
+                <article class="destination-card" data-service="Travel Package" data-destination="Kerala">
+                    <img src="images/placeholder-kerala.webp" alt="Backwaters of Kerala" loading="lazy" width="400" height="300">
+                    <h3>Kerala</h3>
+                    <p>Known as 'God's Own Country', famous for its tranquil backwaters, lush greenery, and rejuvenating Ayurveda.</p>
+                    <button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                </article>
+                <article class="destination-card" data-service="Travel Package" data-destination="Amritsar">
+                    <img src="images/placeholder-amritsar.webp" alt="Golden Temple in Amritsar" loading="lazy" width="400" height="300">
+                    <h3>Amritsar</h3>
+                    <p>Home to the magnificent Golden Temple, a city rich in history, culture, and culinary delights.</p>
+                    <button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                </article>
+                <article class="destination-card" data-service="Travel Package" data-destination="Leh-Ladakh">
+                    <img src="images/placeholder-ladakh.webp" alt="Monastery in Leh-Ladakh with mountains" loading="lazy" width="400" height="300">
+                    <h3>Leh-Ladakh</h3>
+                    <p>A high-altitude desert known for its stark beauty, Buddhist monasteries, and thrilling mountain passes.</p>
+                    <button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                </article>
+                <article class="destination-card" data-service="Travel Package" data-destination="Mumbai">
+                    <img src="images/placeholder-mumbai.webp" alt="Gateway of India in Mumbai" loading="lazy" width="400" height="300">
+                    <h3>Mumbai</h3>
+                    <p>India's financial and entertainment capital, a city that never sleeps, known for its dynamic energy and history.</p>
+                    <button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                </article>
+            </div>
+        </section>
+
+        <section class="destination-group" id="destinations">
+            
+            <section class="destination-section" id="uttarakhand">
+                <h2 class="section-title">🏔️ Uttarakhand Destinations</h2>
+                <p class="section-subtitle">Explore the 'Devbhumi' - Land of Gods, from serene lakes to challenging peaks.</p>
+                <div class="card-grid destination-grid-large">
+                    <article class="destination-card" data-service="Travel Package" data-destination="Nainital">
+                        <img src="images/placeholder-nainital.webp" alt="Nainital Lake and surrounding hills" loading="lazy" width="400" height="300">
+                        <h3>Nainital</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Mussoorie">
+                        <img src="images/placeholder-mussoorie.webp" alt="The hill station of Mussoorie" loading="lazy" width="400" height="300">
+                        <h3>Mussoorie</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Rishikesh">
+                        <img src="images/placeholder-rishikesh.webp" alt="Lakshman Jhula in Rishikesh" loading="lazy" width="400" height="300">
+                        <h3>Rishikesh</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Haridwar">
+                        <img src="images/placeholder-haridwar.webp" alt="Ganga Aarti in Haridwar" loading="lazy" width="400" height="300">
+                        <h3>Haridwar</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Auli">
+                        <img src="images/placeholder-auli.webp" alt="Snow-capped Auli ski slopes" loading="lazy" width="400" height="300">
+                        <h3>Auli</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Jim Corbett">
+                        <img src="images/placeholder-corbett.webp" alt="Tiger in Jim Corbett National Park" loading="lazy" width="400" height="300">
+                        <h3>Jim Corbett</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Dehradun">
+                        <img src="images/placeholder-dehradun.webp" alt="Clock tower in Dehradun" loading="lazy" width="400" height="300">
+                        <h3>Dehradun</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Kedarnath">
+                        <img src="images/placeholder-kedarnath.webp" alt="Kedarnath Temple" loading="lazy" width="400" height="300">
+                        <h3>Kedarnath</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Badrinath">
+                        <img src="images/placeholder-badrinath.webp" alt="Badrinath Temple" loading="lazy" width="400" height="300">
+                        <h3>Badrinath</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Gangotri">
+                        <img src="images/placeholder-gangotri.webp" alt="Gangotri Temple" loading="lazy" width="400" height="300">
+                        <h3>Gangotri</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Yamunotri">
+                        <img src="images/placeholder-yamunotri.webp" alt="Yamunotri Temple" loading="lazy" width="400" height="300">
+                        <h3>Yamunotri</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Dhanaulti">
+                        <img src="images/placeholder-dhanaulti.webp" alt="Dhanaulti Eco Park" loading="lazy" width="400" height="300">
+                        <h3>Dhanaulti</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Chopta">
+                        <img src="images/placeholder-chopta.webp" alt="Tungnath temple in Chopta" loading="lazy" width="400" height="300">
+                        <h3>Chopta</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Ranikhet">
+                        <img src="images/placeholder-ranikhet.webp" alt="Golf course in Ranikhet" loading="lazy" width="400" height="300">
+                        <h3>Ranikhet</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Almora">
+                        <img src="images/placeholder-almora.webp" alt="Himalayan view from Almora" loading="lazy" width="400" height="300">
+                        <h3>Almora</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Lansdowne">
+                        <img src="images/placeholder-lansdowne.webp" alt="Quiet street in Lansdowne" loading="lazy" width="400" height="300">
+                        <h3>Lansdowne</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Kausani">
+                        <img src="images/placeholder-kausani.webp" alt="Sunrise view in Kausani" loading="lazy" width="400" height="300">
+                        <h3>Kausani</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Mukteshwar">
+                        <img src="images/placeholder-mukteshwar.webp" alt="View from Mukteshwar" loading="lazy" width="400" height="300">
+                        <h3>Mukteshwar</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Valley of Flowers">
+                        <img src="images/placeholder-flowers.webp" alt="Valley of Flowers National Park" loading="lazy" width="400" height="300">
+                        <h3>Valley of Flowers</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Bhimtal">
+                        <img src="images/placeholder-bhimtal.webp" alt="Bhimtal Lake" loading="lazy" width="400" height="300">
+                        <h3>Bhimtal</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Chakrata">
+                        <img src="images/placeholder-chakrata.webp" alt="Hills in Chakrata" loading="lazy" width="400" height="300">
+                        <h3>Chakrata</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Munsiyari">
+                        <img src="images/placeholder-munsiyari.webp" alt="Panchachuli peaks from Munsiyari" loading="lazy" width="400" height="300">
+                        <h3>Munsiyari</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                </div>
+            </section>
+            
+            <section class="destination-section bg-secondary" id="char-dham">
+                <h2 class="section-title">🙏 Char Dham Yatra</h2>
+                <p class="section-subtitle">Pilgrimage to the four holiest shrines in the Himalayas.</p>
+                <div class="card-grid char-dham-grid">
+                    <article class="destination-card" data-service="Char Dham Yatra" data-destination="Kedarnath">
+                        <img src="images/placeholder-kedarnath-feature.webp" alt="Kedarnath Temple in the Himalayas" loading="lazy" width="400" height="300">
+                        <h3>Kedarnath</h3>
+                        <p>Dedicated to Lord Shiva, this shrine is nestled at a high altitude in the Garhwal Himalayas.</p>
+                        <button class="btn btn-primary enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Char Dham Yatra" data-destination="Badrinath">
+                        <img src="images/placeholder-badrinath-feature.webp" alt="Badrinath Temple near Alaknanda River" loading="lazy" width="400" height="300">
+                        <h3>Badrinath</h3>
+                        <p>Dedicated to Lord Vishnu, located between the Nar and Narayan mountain ranges.</p>
+                        <button class="btn btn-primary enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Char Dham Yatra" data-destination="Gangotri">
+                        <img src="images/placeholder-gangotri-feature.webp" alt="Source of River Ganga at Gangotri" loading="lazy" width="400" height="300">
+                        <h3>Gangotri</h3>
+                        <p>The origin of the holy River Ganga, a revered spot for Hindu devotees.</p>
+                        <button class="btn btn-primary enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Char Dham Yatra" data-destination="Yamunotri">
+                        <img src="images/placeholder-yamunotri-feature.webp" alt="Yamunotri Temple" loading="lazy" width="400" height="300">
+                        <h3>Yamunotri</h3>
+                        <p>The sacred source of the Yamuna River and the westernmost shrine of the Char Dham.</p>
+                        <button class="btn btn-primary enquiry-cta">Enquire Now</button>
+                    </article>
+                </div>
+            </section>
+
+            <section class="destination-section" id="uttar-pradesh">
+                <h2 class="section-title">🕌 Uttar Pradesh Destinations</h2>
+                <p class="section-subtitle">Experience the historical, cultural, and spiritual heartland of India.</p>
+                <div class="card-grid">
+                    <article class="destination-card" data-service="Travel Package" data-destination="Agra">
+                        <img src="images/placeholder-up-agra.webp" alt="Taj Mahal" loading="lazy" width="400" height="300">
+                        <h3>Agra</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Varanasi">
+                        <img src="images/placeholder-up-varanasi.webp" alt="Varanasi Ghats" loading="lazy" width="400" height="300">
+                        <h3>Varanasi</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Lucknow">
+                        <img src="images/placeholder-up-lucknow.webp" alt="Bara Imambara in Lucknow" loading="lazy" width="400" height="300">
+                        <h3>Lucknow</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Mathura">
+                        <img src="images/placeholder-up-mathura.webp" alt="Krishna Janmabhoomi Temple in Mathura" loading="lazy" width="400" height="300">
+                        <h3>Mathura</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Vrindavan">
+                        <img src="images/placeholder-up-vrindavan.webp" alt="Temples in Vrindavan" loading="lazy" width="400" height="300">
+                        <h3>Vrindavan</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Ayodhya">
+                        <img src="images/placeholder-up-ayodhya.webp" alt="Ram Mandir in Ayodhya" loading="lazy" width="400" height="300">
+                        <h3>Ayodhya</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Prayagraj">
+                        <img src="images/placeholder-up-prayagraj.webp" alt="Triveni Sangam in Prayagraj" loading="lazy" width="400" height="300">
+                        <h3>Prayagraj</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Fatehpur Sikri">
+                        <img src="images/placeholder-up-fatehpur.webp" alt="Buland Darwaza at Fatehpur Sikri" loading="lazy" width="400" height="300">
+                        <h3>Fatehpur Sikri</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Sarnath">
+                        <img src="images/placeholder-up-sarnath.webp" alt="Dhamek Stupa in Sarnath" loading="lazy" width="400" height="300">
+                        <h3>Sarnath</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Jhansi">
+                        <img src="images/placeholder-up-jhansi.webp" alt="Jhansi Fort" loading="lazy" width="400" height="300">
+                        <h3>Jhansi</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Kanpur">
+                        <img src="images/placeholder-up-kanpur.webp" alt="Kanpur Memorial Church" loading="lazy" width="400" height="300">
+                        <h3>Kanpur</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Kushinagar">
+                        <img src="images/placeholder-up-kushinagar.webp" alt="Mahaparinirvana Temple in Kushinagar" loading="lazy" width="400" height="300">
+                        <h3>Kushinagar</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Noida">
+                        <img src="images/placeholder-up-noida.webp" alt="Modern buildings in Noida" loading="lazy" width="400" height="300">
+                        <h3>Noida</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Dudhwa NP">
+                        <img src="images/placeholder-up-dudhwa.webp" alt="Tiger in Dudhwa National Park" loading="lazy" width="400" height="300">
+                        <h3>Dudhwa NP</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                </div>
+            </section>
+            
+            <section class="destination-section bg-secondary" id="delhi">
+                <h2 class="section-title">🏛️ Delhi Destinations</h2>
+                <p class="section-subtitle">Discover the capital's rich history, iconic landmarks, and vibrant culture.</p>
+                <div class="card-grid destination-grid-large">
+                    <article class="destination-card" data-service="Travel Package" data-destination="Red Fort">
+                        <img src="images/placeholder-del-redfort.webp" alt="Red Fort" loading="lazy" width="400" height="300">
+                        <h3>Red Fort</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Qutub Minar">
+                        <img src="images/placeholder-del-qutub.webp" alt="Qutub Minar" loading="lazy" width="400" height="300">
+                        <h3>Qutub Minar</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="India Gate">
+                        <img src="images/placeholder-del-indiagate.webp" alt="India Gate" loading="lazy" width="400" height="300">
+                        <h3>India Gate</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Humayun’s Tomb">
+                        <img src="images/placeholder-del-humayun.webp" alt="Humayun’s Tomb" loading="lazy" width="400" height="300">
+                        <h3>Humayun’s Tomb</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Lotus Temple">
+                        <img src="images/placeholder-del-lotus.webp" alt="Lotus Temple" loading="lazy" width="400" height="300">
+                        <h3>Lotus Temple</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Jama Masjid">
+                        <img src="images/placeholder-del-jama.webp" alt="Jama Masjid" loading="lazy" width="400" height="300">
+                        <h3>Jama Masjid</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Akshardham">
+                        <img src="images/placeholder-del-akshardham.webp" alt="Akshardham Temple" loading="lazy" width="400" height="300">
+                        <h3>Akshardham</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Bangla Sahib">
+                        <img src="images/placeholder-del-bangla.webp" alt="Gurudwara Bangla Sahib" loading="lazy" width="400" height="300">
+                        <h3>Bangla Sahib</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Chandni Chowk">
+                        <img src="images/placeholder-del-chandni.webp" alt="Bustling street of Chandni Chowk" loading="lazy" width="400" height="300">
+                        <h3>Chandni Chowk</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Jantar Mantar">
+                        <img src="images/placeholder-del-jantar.webp" alt="Jantar Mantar observatory" loading="lazy" width="400" height="300">
+                        <h3>Jantar Mantar</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Rashtrapati Bhavan">
+                        <img src="images/placeholder-del-rashtra.webp" alt="Rashtrapati Bhavan" loading="lazy" width="400" height="300">
+                        <h3>Rashtrapati Bhavan</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Lodhi Garden">
+                        <img src="images/placeholder-del-lodhi.webp" alt="Lodhi Garden" loading="lazy" width="400" height="300">
+                        <h3>Lodhi Garden</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Purana Qila">
+                        <img src="images/placeholder-del-purana.webp" alt="Purana Qila (Old Fort)" loading="lazy" width="400" height="300">
+                        <h3>Purana Qila</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Dilli Haat">
+                        <img src="images/placeholder-del-haat.webp" alt="Dilli Haat market" loading="lazy" width="400" height="300">
+                        <h3>Dilli Haat</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Agrasen ki Baoli">
+                        <img src="images/placeholder-del-baoli.webp" alt="Agrasen ki Baoli stepwell" loading="lazy" width="400" height="300">
+                        <h3>Agrasen ki Baoli</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Hauz Khas">
+                        <img src="images/placeholder-del-hauz.webp" alt="Hauz Khas Village ruins" loading="lazy" width="400" height="300">
+                        <h3>Hauz Khas</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Nizamuddin Dargah">
+                        <img src="images/placeholder-del-dargah.webp" alt="Nizamuddin Dargah" loading="lazy" width="400" height="300">
+                        <h3>Nizamuddin Dargah</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="National War Memorial">
+                        <img src="images/placeholder-del-war.webp" alt="National War Memorial" loading="lazy" width="400" height="300">
+                        <h3>National War Memorial</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                </div>
+            </section>
+            
+            <section class="destination-section" id="kashmir">
+                <h2 class="section-title">🏞️ Jammu & Kashmir Destinations</h2>
+                <p class="section-subtitle">Experience the unparalleled beauty of the Himalayas, from tranquil lakes to lush meadows.</p>
+                <div class="card-grid">
+                    <article class="destination-card" data-service="Travel Package" data-destination="Srinagar">
+                        <img src="images/placeholder-srinagar.webp" alt="Srinagar cityscape" loading="lazy" width="400" height="300">
+                        <h3>Srinagar</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Dal Lake">
+                        <img src="images/placeholder-dal-lake.webp" alt="Shikara boats on Dal Lake" loading="lazy" width="400" height="300">
+                        <h3>Dal Lake</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Gulmarg">
+                        <img src="images/placeholder-gulmarg.webp" alt="Meadows in Gulmarg" loading="lazy" width="400" height="300">
+                        <h3>Gulmarg</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Pahalgam">
+                        <img src="images/placeholder-pahalgam.webp" alt="Aru Valley in Pahalgam" loading="lazy" width="400" height="300">
+                        <h3>Pahalgam</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Sonamarg">
+                        <img src="images/placeholder-sonamarg.webp" alt="Glacier view in Sonamarg" loading="lazy" width="400" height="300">
+                        <h3>Sonamarg</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Vaishno Devi">
+                        <img src="images/placeholder-vaishno.webp" alt="Mata Vaishno Devi Temple" loading="lazy" width="400" height="300">
+                        <h3>Vaishno Devi</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Amarnath">
+                        <img src="images/placeholder-amarnath.webp" alt="Amarnath Cave Temple" loading="lazy" width="400" height="300">
+                        <h3>Amarnath</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Patnitop">
+                        <img src="images/placeholder-patnitop.webp" alt="Pine trees in Patnitop" loading="lazy" width="400" height="300">
+                        <h3>Patnitop</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Mughal Gardens">
+                        <img src="images/placeholder-mughal.webp" alt="Nishat Bagh Mughal Gardens" loading="lazy" width="400" height="300">
+                        <h3>Mughal Gardens</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Tulip Garden">
+                        <img src="images/placeholder-tulip.webp" alt="Tulip Garden in Srinagar" loading="lazy" width="400" height="300">
+                        <h3>Tulip Garden</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Aru Valley">
+                        <img src="images/placeholder-aru.webp" alt="Lush green Aru Valley" loading="lazy" width="400" height="300">
+                        <h3>Aru Valley</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Baisaran">
+                        <img src="images/placeholder-baisaran.webp" alt="Pine trees in Baisaran" loading="lazy" width="400" height="300">
+                        <h3>Baisaran</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Nigeen Lake">
+                        <img src="images/placeholder-nigeen.webp" alt="Nigeen Lake" loading="lazy" width="400" height="300">
+                        <h3>Nigeen Lake</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Mubarak Mandi">
+                        <img src="images/placeholder-mandi.webp" alt="Mubarak Mandi Palace" loading="lazy" width="400" height="300">
+                        <h3>Mubarak Mandi</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Bahu Fort">
+                        <img src="images/placeholder-bahu.webp" alt="Bahu Fort" loading="lazy" width="400" height="300">
+                        <h3>Bahu Fort</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Shankaracharya Temple">
+                        <img src="images/placeholder-shankar.webp" alt="Shankaracharya Temple" loading="lazy" width="400" height="300">
+                        <h3>Shankaracharya Temple</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                    <article class="destination-card" data-service="Travel Package" data-destination="Mansar Lake">
+                        <img src="images/placeholder-mansar.webp" alt="Mansar Lake" loading="lazy" width="400" height="300">
+                        <h3>Mansar Lake</h3><button class="btn btn-accent enquiry-cta">Enquire Now</button>
+                    </article>
+                </div>
+            </section>
+        </section>
+
+        <section class="destination-section bg-secondary" id="temples">
+            <h2 class="section-title">🕉️ Famous Temples of North India</h2>
+            <p class="section-subtitle">Experience spiritual serenity at these revered pilgrimage sites.</p>
+            <div class="card-grid">
+                <article class="temple-card" data-service="Temple Tour" data-destination="Golden Temple, Amritsar">
+                    <img src="images/placeholder-goldentemple.webp" alt="Golden Temple (Harmandir Sahib)" loading="lazy" width="400" height="300">
+                    <h3>Golden Temple, Amritsar</h3>
+                    <p>The holiest Gurdwara and the most important pilgrimage site of Sikhism, famous for its stunning golden architecture and peaceful atmosphere.</p>
+                    <button class="btn btn-primary enquiry-cta">Enquire Now</button>
+                </article>
+                <article class="temple-card" data-service="Temple Tour" data-destination="Kashi Vishwanath, Varanasi">
+                    <img src="images/placeholder-kashi.webp" alt="Kashi Vishwanath Temple, Varanasi" loading="lazy" width="400" height="300">
+                    <h3>Kashi Vishwanath, Varanasi</h3>
+                    <p>One of the most famous Hindu temples dedicated to Lord Shiva, located on the western bank of the holy river Ganga.</p>
+                    <button class="btn btn-primary enquiry-cta">Enquire Now</button>
+                </article>
+                <article class="temple-card" data-service="Temple Tour" data-destination="Neelkanth Mahadev, Rishikesh">
+                    <img src="images/placeholder-neelkanth.webp" alt="Neelkanth Mahadev Temple near Rishikesh" loading="lazy" width="400" height="300">
+                    <h3>Neelkanth Mahadev, Rishikesh</h3>
+                    <p>A sacred Hindu temple dedicated to Lord Shiva, situated at a height of 1330 meters, surrounded by valleys of Manikoot, Brahmakoot, and Vishnukoot.</p>
+                    <button class="btn btn-primary enquiry-cta">Enquire Now</button>
+                </article>
+                <article class="temple-card" data-service="Temple Tour" data-destination="Banke Bihari, Vrindavan">
+                    <img src="images/placeholder-banke.webp" alt="Banke Bihari Temple, Vrindavan" loading="lazy" width="400" height="300">
+                    <h3>Banke Bihari, Vrindavan</h3>
+                    <p>One of the holiest temples of Lord Krishna, where the deity stands in the 'Tribhanga' posture.</p>
+                    <button class="btn btn-primary enquiry-cta">Enquire Now</button>
+                </article>
+            </div>
+        </section>
+
+        <section class="taxi-section" id="taxi">
+            <h2 class="section-title">🚕 Reliable Taxi Services</h2>
+            <p class="section-subtitle">Book a comfortable ride for local sightseeing or inter-city travel.</p>
+            <div class="card-grid taxi-grid">
+                <article class="taxi-card">
+                    <span class="taxi-icon">🚗</span>
+                    <h3>Sedan (4 Seaters)</h3>
+                    <p>Ideal for small families or business trips. Comfortable and economical travel.</p>
+                    <ul class="taxi-features">
+                        <li>**Seating:** Max 4 Passengers</li>
+                        <li>**Routes (Sample):** Delhi to Dehradun, Chandigarh to Shimla</li>
+                    </ul>
+                    <button class="btn btn-accent taxi-cta" data-service="Taxi Booking" data-destination="Sedan">Book Sedan</button>
+                </article>
+                <article class="taxi-card">
+                    <span class="taxi-icon">🚙</span>
+                    <h3>SUV (6-7 Seaters)</h3>
+                    <p>Perfect for larger families, extra luggage, or hilly terrain. Power and comfort combined.</p>
+                    <ul class="taxi-features">
+                        <li>**Seating:** Max 6-7 Passengers</li>
+                        <li>**Routes (Sample):** Haridwar to Kedarnath, Delhi to Manali</li>
+                    </ul>
+                    <button class="btn btn-accent taxi-cta" data-service="Taxi Booking" data-destination="SUV">Book SUV</button>
+                </article>
+                <article class="taxi-card">
+                    <span class="taxi-icon">🚌</span>
+                    <h3>Tempo Traveller (9-18 Seaters)</h3>
+                    <p>Best for group tours, corporate travel, or large family outings. Spacious and luxurious.</p>
+                    <ul class="taxi-features">
+                        <li>**Seating:** Max 9-18 Passengers</li>
+                        <li>**Routes (Sample):** Delhi to Char Dham Yatra, Dehradun Local Tour</li>
+                    </ul>
+                    <button class="btn btn-accent taxi-cta" data-service="Taxi Booking" data-destination="Tempo Traveller">Book Tempo</button>
+                </article>
+            </div>
+        </section>
+
+        <section class="testimonial-section bg-secondary" id="testimonials" aria-label="Customer Testimonials">
+            <h2 class="section-title">⭐ What Our Clients Say</h2>
+            <div class="testimonial-slider-container">
+                <button class="slider-btn prev-btn" aria-label="Previous Testimonial">❮</button>
+                <div class="testimonial-slider" data-current-index="0">
+                    <article class="testimonial-slide active" role="region" aria-label="Testimonial by Ramesh Sharma">
+                        <div class="testimonial-rating" role="img" aria-label="5 star rating">★★★★★</div>
+                        <p class="testimonial-text">"Tridev Travel made our Char Dham Yatra seamless and peaceful. The taxi service was excellent, and the driver was knowledgeable and safe. Highly recommended!"</p>
+                        <footer class="testimonial-footer">
+                            <span class="testimonial-name">Ramesh Sharma</span>
+                            <time class="testimonial-date" datetime="2025-10-15">Oct 15, 2025</time>
+                        </footer>
+                    </article>
+                    <article class="testimonial-slide" role="region" aria-label="Testimonial by Priya Singh">
+                        <div class="testimonial-rating" role="img" aria-label="5 star rating">★★★★★</div>
+                        <p class="testimonial-text">"We booked a Kashmir package, and everything exceeded expectations. The hotel choices and itinerary were perfect. We'll definitely book our next trip with Tridev."</p>
+                        <footer class="testimonial-footer">
+                            <span class="testimonial-name">Priya Singh</span>
+                            <time class="testimonial-date" datetime="2025-11-01">Nov 01, 2025</time>
+                        </footer>
+                    </article>
+                    <article class="testimonial-slide" role="region" aria-label="Testimonial by David Lee">
+                        <div class="testimonial-rating" role="img" aria-label="5 star rating">★★★★★</div>
+                        <p class="testimonial-text">"Needed a quick taxi from Delhi to Agra. The booking was easy, the car was clean, and the driver was prompt. Best taxi service I've used in India."</p>
+                        <footer class="testimonial-footer">
+                            <span class="testimonial-name">David Lee</span>
+                            <time class="testimonial-date" datetime="2025-09-28">Sep 28, 2025</time>
+                        </footer>
+                    </article>
+                </div>
+                <button class="slider-btn next-btn" aria-label="Next Testimonial">❯</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>Tridev Travel</h3>
+                <p>Your journey to incredible destinations starts here. Reliable, comfortable, and memorable travel experiences.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#char-dham">Char Dham Yatra</a></li>
+                    <li><a href="#taxi">Taxi Booking</a></li>
+                    <li><a href="#" class="quick-enquiry-btn">Quick Enquiry</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <p><strong>Travel/Packages:</strong> <a href="tel:+919634347223">+91 96343 47223</a></p>
+                <p><strong>Taxi Services:</strong> <a href="tel:+918800778189">+91 88007 78189</a></p>
+                <p><strong>Support:</strong> <a href="mailto:info@tridevtravel.com">info@tridevtravel.com</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Tridev Travel Agency. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div class="floating-buttons-desktop">
+        <a href="#" class="float-btn float-whatsapp" aria-label="Chat with us on WhatsApp">
+            <span class="icon">💬</span>
+            <span class="text">WhatsApp</span>
+        </a>
+        <a href="tel:+919634347223" class="float-btn float-call-travel" aria-label="Call for Travel Packages">
+            <span class="icon">📞</span>
+            <span class="text">Call Travel</span>
+        </a>
+        <a href="tel:+918800778189" class="float-btn float-call-taxi" aria-label="Call for Taxi Services">
+            <span class="icon">🚕</span>
+            <span class="text">Call Taxi</span>
+        </a>
+        <button class="float-btn float-enquiry quick-enquiry-btn" aria-label="Quick Enquiry Form">
+            <span class="icon">📧</span>
+            <span class="text">Enquiry</span>
+        </button>
+    </div>
+
+    <div class="mobile-bottom-bar">
+        <a href="#" class="bar-btn bar-whatsapp" aria-label="Chat with us on WhatsApp">
+            <span class="icon">💬</span>
+            <span class="text">WhatsApp</span>
+        </a>
+        <a href="tel:+919634347223" class="bar-btn bar-call" aria-label="Call for Bookings">
+            <span class="icon">📞</span>
+            <span class="text">Call Now</span>
+        </a>
+        <button class="bar-btn bar-enquire quick-enquiry-btn" aria-label="Quick Enquiry">
+            <span class="icon">📧</span>
+            <span class="text">Enquire</span>
+        </button>
+    </div>
+
+    <script src="main.js" defer></script>
+</body>
+</html>
